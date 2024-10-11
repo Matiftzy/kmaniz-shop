@@ -302,22 +302,21 @@
 
     <!-- Box Info Toko -->
     <div class="container">
-        <div class="store-info" id="home">
-            <h2>Tentang Website Ini</h2>
-            <p>
-                Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
-            </p>
-            <ul>
-                <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
-                <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
-                <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
-                <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
-            </ul>
-        </div>
-
         <!-- Area Konten Dinamis -->
         <div id="main-content">
-            <!-- Konten dari jual-akun dan list-joki akan dimuat di sini -->
+            <!-- Konten home akan dimuat di sini -->
+            <div class="store-info">
+                <h2>Tentang Website Ini</h2>
+                <p>
+                    Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
+                </p>
+                <ul>
+                    <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
+                    <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
+                    <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
+                    <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
+                </ul>
+            </div>
         </div>
 
         <!-- Tombol Menuju Layanan -->
@@ -353,9 +352,20 @@
 
             if(page === 'home') {
                 // Tampilkan konten home
-                mainContent.innerHTML = '';
-                const homeContent = document.getElementById('home').innerHTML;
-                mainContent.innerHTML = homeContent;
+                mainContent.innerHTML = `
+                    <div class="store-info">
+                        <h2>Tentang Website Ini</h2>
+                        <p>
+                            Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
+                        </p>
+                        <ul>
+                            <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
+                            <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
+                            <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
+                            <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
+                        </ul>
+                    </div>
+                `;
                 return;
             }
 
@@ -411,6 +421,7 @@
         // Muat konten home saat halaman pertama kali dibuka
         window.onload = function() {
             loadPage('home');
+            document.body.classList.add('fade-in');
         };
     </script>
 </body>
