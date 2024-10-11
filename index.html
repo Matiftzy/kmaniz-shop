@@ -25,6 +25,9 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149009213.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         header {
@@ -43,12 +46,12 @@
         }
 
         .container {
-            background: #f9f9f9;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 30px;
             max-width: 800px;
             width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -106,7 +109,7 @@
         }
 
         .contact-info {
-            background: #f1f1f1;
+            background: rgba(241, 241, 241, 0.95);
             border-radius: 10px;
             padding: 20px;
             width: 100%;
@@ -126,7 +129,7 @@
         }
 
         .account-specs {
-            background: #f1f1f1;
+            background: rgba(241, 241, 241, 0.95);
             border-radius: 10px;
             padding: 20px;
             width: 100%;
@@ -161,6 +164,12 @@
             color: #ff6600;
             position: absolute;
             left: 0;
+        }
+
+        /* Menyorot Label */
+        .account-specs .label {
+            font-weight: 700;
+            color: #ff6600;
         }
 
         footer {
@@ -238,14 +247,14 @@
         <div class="account-specs">
             <h3>Spek Akun (Blox Fruit)</h3>
             <ul>
-                <li>Buah yang saya miliki: Kitsune Fruit</li>
-                <li>Level: 2550 (MAX)</li>
-                <li>Belly: $21M+ (Akan naik terus karena di mainkan oleh penjual)</li>
-                <li>Fragments: ƒ6K (Akan naik terus karena di mainkan oleh penjual)</li>
-                <li>Melee: God Human</li>
-                <li>Sword: CDK (Cursed Dual Katana)</li>
-                <li>Gun: Soul Guitar</li>
-                <li>V4: Shark (Gear 1)</li>
+                <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit</li>
+                <li><span class="label">Level:</span> 2550 (MAX)</li>
+                <li><span class="label">Belly:</span> $21M+ (Akan naik terus karena di mainkan oleh penjual)</li>
+                <li><span class="label">Fragments:</span> ƒ6K (Akan naik terus karena di mainkan oleh penjual)</li>
+                <li><span class="label">Melee:</span> God Human</li>
+                <li><span class="label">Sword:</span> CDK (Cursed Dual Katana)</li>
+                <li><span class="label">Gun:</span> Soul Guitar</li>
+                <li><span class="label">V4:</span> Shark (Gear 1)</li>
             </ul>
         </div>
 
