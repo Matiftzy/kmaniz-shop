@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Game dan Jasa Joki</title>
+    <title>Blox Fruit Showcase - Toko Game dan Jasa Joki</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://st2.depositphotos.com/5142301/7852/v/450/depositphotos_78526504-stock-illustration-k-letter-logo-design-template.jpg" type="image/jpeg">
@@ -295,14 +295,14 @@
     <!-- Sidebar Menu -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
-        <a href="index.html" onclick="navigateWithFade('index.html')">Home</a>
-        <a href="jual-akun.html" onclick="navigateWithFade('jual-akun.html')">Jual Akun</a>
-        <a href="list-joki.html" onclick="navigateWithFade('list-joki.html')">List Joki</a>
+        <a href="#" data-page="home">Home</a>
+        <a href="#" data-page="jual-akun">Jual Akun</a>
+        <a href="#" data-page="list-joki">List Joki</a>
     </div>
 
     <!-- Box Info Toko -->
     <div class="container">
-        <div class="store-info">
+        <div class="store-info" id="home">
             <h2>Tentang Website Ini</h2>
             <p>
                 Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
@@ -315,9 +315,14 @@
             </ul>
         </div>
 
+        <!-- Area Konten Dinamis -->
+        <div id="main-content">
+            <!-- Konten dari jual-akun dan list-joki akan dimuat di sini -->
+        </div>
+
         <!-- Tombol Menuju Layanan -->
-        <a class="button" href="jual-akun.html">Jual Akun</a>
-        <a class="button" href="list-joki.html">List Joki</a>
+        <a class="button" href="#" data-page="jual-akun">Jual Akun</a>
+        <a class="button" href="#" data-page="list-joki">List Joki</a>
 
         <!-- Bagian Kontak -->
         <div class="contact-info">
@@ -330,29 +335,82 @@
         <p>&copy; 2024 Toko Game dan Jasa Joki. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- JavaScript untuk Sidebar dan Transisi -->
+    <!-- JavaScript untuk Sidebar, Transisi, dan Memuat Konten Dinamis -->
     <script>
+        // Fungsi untuk membuka sidebar
         function openSidebar() {
             document.getElementById("mySidebar").style.width = "250px";
         }
 
+        // Fungsi untuk menutup sidebar
         function closeSidebar() {
             document.getElementById("mySidebar").style.width = "0";
         }
 
-        function navigateWithFade(url) {
-            // Tambahkan kelas fade-out
-            document.body.classList.add('fade-out');
+        // Fungsi untuk memuat konten dinamis
+        async function loadPage(page) {
+            const mainContent = document.getElementById('main-content');
 
-            // Tunggu hingga animasi selesai sebelum berpindah halaman
-            setTimeout(function() {
-                window.location.href = url;
-            }, 500); // Durasi harus sama dengan durasi transisi di CSS
+            if(page === 'home') {
+                // Tampilkan konten home
+                mainContent.innerHTML = '';
+                const homeContent = document.getElementById('home').innerHTML;
+                mainContent.innerHTML = homeContent;
+                return;
+            }
+
+            try {
+                const response = await fetch(`${page}/index.html`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const html = await response.text();
+                mainContent.innerHTML = html;
+            } catch (error) {
+                mainContent.innerHTML = `<p>Maaf, halaman tidak dapat dimuat.</p>`;
+                console.error('Error fetching page:', error);
+            }
         }
 
-        // Tambahkan kelas fade-in saat halaman dimuat
+        // Event listener untuk tombol dan link di sidebar
+        document.querySelectorAll('a[data-page]').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const page = this.getAttribute('data-page');
+
+                // Tambahkan kelas fade-out
+                document.body.classList.add('fade-out');
+
+                // Panggil fungsi loadPage setelah sedikit delay untuk animasi
+                setTimeout(() => {
+                    loadPage(page);
+                    document.body.classList.remove('fade-out');
+                    document.body.classList.add('fade-in');
+                }, 500);
+            });
+        });
+
+        // Event listener untuk tombol di dalam konten
+        document.querySelectorAll('.button[data-page]').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const page = this.getAttribute('data-page');
+
+                // Tambahkan kelas fade-out
+                document.body.classList.add('fade-out');
+
+                // Panggil fungsi loadPage setelah sedikit delay untuk animasi
+                setTimeout(() => {
+                    loadPage(page);
+                    document.body.classList.remove('fade-out');
+                    document.body.classList.add('fade-in');
+                }, 500);
+            });
+        });
+
+        // Muat konten home saat halaman pertama kali dibuka
         window.onload = function() {
-            document.body.classList.add('fade-in');
+            loadPage('home');
         };
     </script>
 </body>
