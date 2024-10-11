@@ -120,40 +120,49 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        /* Container */
-        .container {
+        /* Seksi */
+        .section {
+            width: 100%;
+            max-width: 800px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 30px;
-            max-width: 800px;
-            width: 100%;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
+            margin-bottom: 30px;
+            display: none; /* Disembunyikan secara default */
+            opacity: 0;
             transition: opacity 0.5s ease;
+            position: relative;
         }
 
-        .avatar {
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Styling khusus untuk Toko Jual Akun */
+        #toko-section .avatar {
             border: 3px solid #e0e0e0;
             border-radius: 50%;
             width: 200px;
             height: 200px;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto; /* Centered horizontally */
             transition: transform 0.3s ease;
         }
 
-        .avatar img {
+        #toko-section .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .avatar:hover {
+        #toko-section .avatar:hover {
             transform: scale(1.05);
+        }
+
+        #toko-section h2, #toko-section h3, #toko-section .button {
+            text-align: center; /* Ensure texts are centered */
         }
 
         h2 {
@@ -179,6 +188,7 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             font-weight: bold;
             margin-bottom: 30px;
+            display: inline-block;
         }
 
         .button:hover {
@@ -186,25 +196,7 @@
             transform: translateY(-3px);
         }
 
-        /* Seksi Toko Jual Akun dan Joki Akun */
-        .section {
-            width: 100%;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            display: none; /* Disembunyikan secara default */
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .section.active {
-            display: block;
-            opacity: 1;
-        }
-
+        /* Konten Seksi */
         .account-specs, .screenshot-box, .contact-info {
             background: #f1f1f1;
             border-radius: 10px;
@@ -258,6 +250,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Kontak */
+        .contact-info {
+            text-align: center;
+        }
+
+        /* Footer */
         footer {
             margin-top: auto;
             width: 100%;
@@ -278,11 +276,11 @@
                 font-size: 2rem;
             }
 
-            .container, .section {
+            .section {
                 padding: 20px;
             }
 
-            .avatar {
+            #toko-section .avatar {
                 width: 150px;
                 height: 150px;
             }
@@ -373,7 +371,7 @@
     <!-- Seksi Joki Akun -->
     <div class="section" id="joki-section">
         <h2>Joki Akun</h2>
-        <h3></h3> <!-- ID dihapus -->
+        <!-- ID dihapus -->
         
         <!-- Tombol menuju profil Roblox dihapus -->
 
