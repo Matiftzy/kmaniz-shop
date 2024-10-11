@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blox Fruit Showcase - RagingDemonXOwn1</title>
+    <title>Jual Akun - RagingDemonXOwn1</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://st2.depositphotos.com/5142301/7852/v/450/depositphotos_78526504-stock-illustration-k-letter-logo-design-template.jpg" type="image/jpeg">
@@ -33,10 +33,12 @@
             background-position: center;
         }
 
+        /* Header dan Navigasi */
         header {
             width: 100%;
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
 
         header h1 {
@@ -46,6 +48,101 @@
             letter-spacing: 2px;
             color: #333333;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Menu Navigasi */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        .navbar .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            width: 150px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .navbar .menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar .menu a:last-child {
+            border-bottom: none;
+        }
+
+        .navbar .menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Ikon Hamburger */
+        .navbar .hamburger {
+            display: block;
+            cursor: pointer;
+            width: 25px;
+            height: 3px;
+            background-color: #333333;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .hamburger::before,
+        .navbar .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background-color: #333333;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .hamburger::before {
+            transform: translateY(-8px);
+        }
+
+        .navbar .hamburger::after {
+            transform: translateY(8px);
+        }
+
+        /* Animasi saat Menu Dibuka */
+        .navbar.active .hamburger {
+            background-color: transparent;
+        }
+
+        .navbar.active .hamburger::before {
+            transform: rotate(45deg);
+        }
+
+        .navbar.active .hamburger::after {
+            transform: rotate(-45deg);
+        }
+
+        .navbar.active .menu {
+            display: flex;
         }
 
         .container {
@@ -222,6 +319,16 @@
                 font-size: 2rem;
             }
 
+            .navbar {
+                padding: 10px 20px;
+            }
+
+            .navbar .menu {
+                width: 100%;
+                right: 0;
+                top: 50px;
+            }
+
             .container {
                 padding: 20px;
             }
@@ -257,52 +364,3 @@
             }
         }
     </style>
-</head>
-<body>
-    <header>
-        <h1>Showcase Akun Blox Fruit</h1>
-    </header>
-
-    <div class="container">
-        <div class="avatar">
-            <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
-        </div>
-        <h2>RagingDemonXOwn1</h2>
-        <h3>ID: 5576044696</h3>
-        
-        <!-- Tombol menuju profil Roblox -->
-        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
-
-        <!-- Bagian Spek Akun -->
-        <div class="account-specs">
-            <h3>Spek Akun (Blox Fruit)</h3>
-            <ul>
-                <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit</li>
-                <li><span class="label">Level:</span> 2550 (MAX)</li>
-                <li><span class="label">Belly:</span> $21M+ (Akan naik terus karena di mainkan oleh penjual)</li>
-                <li><span class="label">Fragments:</span> ƒ6K (Akan naik terus karena di mainkan oleh penjual)</li>
-                <li><span class="label">Melee:</span> God Human</li>
-                <li><span class="label">Sword:</span> CDK (Cursed Dual Katana)</li>
-                <li><span class="label">Gun:</span> Soul Guitar</li>
-                <li><span class="label">V4:</span> Shark (Gear 1)</li>
-            </ul>
-        </div>
-
-        <!-- Bagian Screenshot Akun -->
-        <div class="screenshot-box">
-            <h3>Screenshot Akun</h3>
-            <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
-        </div>
-
-        <!-- Bagian Kontak -->
-        <div class="contact-info">
-            <p>Hubungi saya di Discord: <span>kentalmaniz.</span></p>
-            <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 RagingDemonXOwn1. Semua hak dilindungi.</p>
-    </footer>
-</body>
-</html>
