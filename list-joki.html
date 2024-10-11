@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Joki - RagingDemonXOwn1</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://st2.depositphotos.com/5142301/7852/v/450/depositphotos_78526504-stock-illustration-k-letter-logo-design-template.jpg" type="image/jpeg">
+
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149009213.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Fade In and Out Classes */
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #333333;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Hamburger Menu Styling */
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 4px;
+            background-color: #333333;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+        }
+
+        .sidebar a {
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #333333;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff6600;
+            color: #ffffff;
+        }
+
+        /* Close Button */
+        .sidebar .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            margin-left: 50px;
+            cursor: pointer;
+            color: #ff6600;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar {
+            border: 3px solid #e0e0e0;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff6600;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
+        .button {
+            background-color: #ff6600;
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .button:hover {
+            background-color: #e65c00;
+            transform: translateY(-3px);
+        }
+
+        .contact-info {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            color: #333333;
+            margin-top: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-info span {
+            font-weight: 700;
+            color: #ff6600;
+        }
+
+        .account-specs {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+        }
+
+        .account-specs h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .account-specs ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .account-specs li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .account-specs li::before {
+            content: "•";
+            color: #ff6600;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Menyorot Label */
+        .account-specs .label {
+            font-weight: 700;
+            color: #ff6600;
+        }
+
+        /* Styling untuk Screenshot Akun */
+        .screenshot-box {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+        }
+
+        .screenshot-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .screenshot-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Membuat sudut gambar halus */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            background: #f1f1f1;
+            color: #333333;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3, p {
+                font-size: 1rem;
+            }
+
+            .button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .contact-info, .account-specs, .screenshot-box {
+                padding: 15px;
+            }
+
+            .account-specs h3, .screenshot-box h3 {
+                font-size: 1.2rem;
+            }
+
+            .account-specs li, .screenshot-box img {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="openSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1>Jual Akun Blox Fruit</h1>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
+        <a href="index.html" onclick="navigateWithFade('index.html')">Home</a>
+        <a href="jual-akun.html" onclick="navigateWithFade('jual-akun.html')">Jual Akun</a>
+        <a href="list-joki.html" onclick="navigateWithFade('list-joki.html')">List Joki</a>
+    </div>
+
+    <div class="container">
+        <h2>Jual Akun Blox Fruit</h2>
+        <p>Jika kamu tertarik untuk membeli akun saya, silakan hubungi saya melalui Discord atau WhatsApp.</p>
+        
+        <!-- Tombol kontak -->
+        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
+
+        <!-- Bagian Kontak -->
+        <div class="contact-info">
+            <p>Hubungi saya di Discord: <span>kentalmaniz.</span></p>
+            <p>Atau WA: <span>+62 853-9585-2011</span> untuk informasi lebih lanjut.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RagingDemonXOwn1. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript untuk Sidebar dan Transisi -->
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        function navigateWithFade(url) {
+            // Tambahkan kelas fade-out
+            document.body.classList.add('fade-out');
+
+            // Tunggu hingga animasi selesai sebelum berpindah halaman
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // Durasi harus sama dengan durasi transisi di CSS
+        }
+
+        // Tambahkan kelas fade-in saat halaman dimuat
+        window.onload = function() {
+            document.body.classList.add('fade-in');
+        };
+    </script>
+</body>
+</html>
