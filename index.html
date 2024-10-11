@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kManiz - Toko Game dan Joki</title>
+    <title>Blox Fruit Showcase - Toko Game dan Jasa Joki</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://st2.depositphotos.com/5142301/7852/v/450/depositphotos_78526504-stock-illustration-k-letter-logo-design-template.jpg" type="image/jpeg">
@@ -32,6 +32,7 @@
             background-size: cover;
             background-position: center;
             transition: opacity 0.5s ease;
+            opacity: 0;
         }
 
         /* Fade In and Out Classes */
@@ -140,7 +141,7 @@
             border-radius: 10px;
             padding: 20px;
             width: 100%;
-            text-align: left;
+            text-align: center; /* Mengatur teks menjadi tengah */
             color: #333;
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -157,11 +158,14 @@
         .store-info p {
             font-size: 1.1rem;
             line-height: 1.6;
+            text-align: center; /* Memastikan paragraf berada di tengah */
+            margin-bottom: 20px;
         }
 
         .store-info ul {
             list-style: none;
             padding-left: 0;
+            text-align: left; /* Mengatur list tetap kiri */
         }
 
         .store-info ul li {
@@ -173,6 +177,12 @@
             content: "•";
             color: #ff6600;
             margin-right: 10px;
+        }
+
+        /* Menyorot Label */
+        .highlight {
+            font-weight: 700;
+            color: #ff6600;
         }
 
         .button {
@@ -236,12 +246,16 @@
                 padding: 20px;
             }
 
-            h2 {
+            .store-info h2 {
                 font-size: 1.5rem;
             }
 
-            h3, p {
+            .store-info p {
                 font-size: 1rem;
+            }
+
+            .store-info ul li {
+                font-size: 0.9rem;
             }
 
             .button {
@@ -275,7 +289,7 @@
             <div></div>
             <div></div>
         </div>
-        <h1>Website Toko Game dan Joki</h1>
+        <h1>Website Toko Game dan Jasa Joki</h1>
     </header>
 
     <!-- Sidebar Menu -->
@@ -294,14 +308,14 @@
                 Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
             </p>
             <ul>
-                <li>Penjualan akun game siap pakai dengan level tinggi.</li>
-                <li>Jasa joki leveling hingga level maksimal.</li>
-                <li>Mengumpulkan buah langka dan item premium.</li>
-                <li>Layanan joki cepat dan terpercaya.</li>
+                <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
+                <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
+                <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
+                <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
             </ul>
         </div>
 
-        <!-- Tombol kontak atau menuju layanan -->
+        <!-- Tombol Menuju Layanan -->
         <a class="button" href="jual-akun.html">Lihat Akun yang Dijual</a>
         <a class="button" href="list-joki.html">Pesan Layanan Joki</a>
 
@@ -313,7 +327,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Toko Game dan Joki. Semua hak dilindungi.</p>
+        <p>&copy; 2024 Toko Game dan Jasa Joki. Semua hak dilindungi.</p>
     </footer>
 
     <!-- JavaScript untuk Sidebar dan Transisi -->
