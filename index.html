@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blox Fruit Showcase - Toko Game dan Jasa Joki</title>
+    <title>kManiz Shop</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://st2.depositphotos.com/5142301/7852/v/450/depositphotos_78526504-stock-illustration-k-letter-logo-design-template.jpg" type="image/jpeg">
@@ -31,24 +31,12 @@
             background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149009213.jpg');
             background-size: cover;
             background-position: center;
-            transition: opacity 0.5s ease;
-            opacity: 0; /* Awal opacity 0 */
-        }
-
-        /* Fade In and Out Classes */
-        .fade-out {
-            opacity: 0;
-        }
-
-        .fade-in {
-            opacity: 1;
         }
 
         header {
             width: 100%;
             text-align: center;
             margin-bottom: 40px;
-            position: relative;
         }
 
         header h1 {
@@ -58,67 +46,6 @@
             letter-spacing: 2px;
             color: #333333;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        /* Hamburger Menu Styling */
-        .hamburger {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 30px;
-            height: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 100%;
-            height: 4px;
-            background-color: #333333;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        /* Sidebar Menu */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.95);
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            z-index: 1000;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-        }
-
-        .sidebar a {
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            color: #333333;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #ff6600;
-            color: #ffffff;
-        }
-
-        /* Close Button */
-        .sidebar .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            font-size: 2rem;
-            margin-left: 50px;
-            cursor: pointer;
-            color: #ff6600;
         }
 
         .container {
@@ -132,57 +59,39 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+
+        .avatar {
+            border: 3px solid #e0e0e0;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
 
-        /* Box Toko */
-        .store-info {
-            background: #f9f9f9;
-            border-radius: 10px;
-            padding: 20px;
+        .avatar img {
             width: 100%;
-            text-align: center; /* Mengatur teks menjadi tengah */
-            color: #333;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            object-fit: cover;
         }
 
-        .store-info h2 {
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             margin-bottom: 10px;
             color: #ff6600;
-            text-align: center;
         }
 
-        .store-info p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: center; /* Memastikan paragraf berada di tengah */
-            margin-bottom: 20px;
-        }
-
-        .store-info ul {
-            list-style: none;
-            padding-left: 0;
-            text-align: left; /* Mengatur list tetap kiri */
-        }
-
-        .store-info ul li {
-            font-size: 1rem;
+        h3 {
+            font-size: 1.2rem;
             margin-bottom: 10px;
-        }
-
-        .store-info ul li::before {
-            content: "•";
-            color: #ff6600;
-            margin-right: 10px;
-        }
-
-        /* Menyorot Label */
-        .highlight {
-            font-weight: 700;
-            color: #ff6600;
+            color: #555555;
         }
 
         .button {
@@ -222,6 +131,77 @@
             color: #ff6600;
         }
 
+        .account-specs {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+        }
+
+        .account-specs h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .account-specs ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .account-specs li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .account-specs li::before {
+            content: "•";
+            color: #ff6600;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Menyorot Label */
+        .account-specs .label {
+            font-weight: 700;
+            color: #ff6600;
+        }
+
+        /* Styling untuk Screenshot Akun */
+        .screenshot-box {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+        }
+
+        .screenshot-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .screenshot-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Membuat sudut gambar halus */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             margin-top: auto;
             width: 100%;
@@ -246,16 +226,17 @@
                 padding: 20px;
             }
 
-            .store-info h2 {
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            h2 {
                 font-size: 1.5rem;
             }
 
-            .store-info p {
+            h3, p {
                 font-size: 1rem;
-            }
-
-            .store-info ul li {
-                font-size: 0.9rem;
             }
 
             .button {
@@ -263,19 +244,15 @@
                 padding: 10px 20px;
             }
 
-            .contact-info, .store-info {
+            .contact-info, .account-specs, .screenshot-box {
                 padding: 15px;
             }
 
-            .store-info h2 {
-                font-size: 1.5rem;
+            .account-specs h3, .screenshot-box h3 {
+                font-size: 1.2rem;
             }
 
-            .store-info p {
-                font-size: 1rem;
-            }
-
-            .store-info ul li {
+            .account-specs li, .screenshot-box img {
                 font-size: 0.9rem;
             }
         }
@@ -283,146 +260,49 @@
 </head>
 <body>
     <header>
-        <!-- Hamburger Menu -->
-        <div class="hamburger" onclick="openSidebar()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <h1>Website Toko Game dan Jasa Joki</h1>
+        <h1>Showcase Akun Blox Fruit</h1>
     </header>
 
-    <!-- Sidebar Menu -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
-        <a href="#" data-page="home">Home</a>
-        <a href="#" data-page="jual-akun">Jual Akun</a>
-        <a href="#" data-page="list-joki">List Joki</a>
-    </div>
-
-    <!-- Box Info Toko -->
     <div class="container">
-        <!-- Area Konten Dinamis -->
-        <div id="main-content">
-            <!-- Konten home akan dimuat di sini -->
-            <div class="store-info">
-                <h2>Tentang Website Ini</h2>
-                <p>
-                    Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
-                </p>
-                <ul>
-                    <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
-                    <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
-                    <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
-                    <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
-                </ul>
-            </div>
+        <div class="avatar">
+            <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
+        </div>
+        <h2>RagingDemonXOwn1</h2>
+        <h3>ID: 5576044696</h3>
+        
+        <!-- Tombol menuju profil Roblox -->
+        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
+
+        <!-- Bagian Spek Akun -->
+        <div class="account-specs">
+            <h3>Spek Akun (Blox Fruit)</h3>
+            <ul>
+                <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit</li>
+                <li><span class="label">Level:</span> 2550 (MAX)</li>
+                <li><span class="label">Belly:</span> $21M+ (Akan naik terus karena di mainkan oleh penjual)</li>
+                <li><span class="label">Fragments:</span> ƒ6K (Akan naik terus karena di mainkan oleh penjual)</li>
+                <li><span class="label">Melee:</span> God Human</li>
+                <li><span class="label">Sword:</span> CDK (Cursed Dual Katana)</li>
+                <li><span class="label">Gun:</span> Soul Guitar</li>
+                <li><span class="label">V4:</span> Shark (Gear 1)</li>
+            </ul>
         </div>
 
-        <!-- Tombol Menuju Layanan -->
-        <a class="button" href="#" data-page="jual-akun">Jual Akun</a>
-        <a class="button" href="#" data-page="list-joki">List Joki</a>
+        <!-- Bagian Screenshot Akun -->
+        <div class="screenshot-box">
+            <h3>Screenshot Akun</h3>
+            <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
+        </div>
 
         <!-- Bagian Kontak -->
         <div class="contact-info">
-            <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-            <p>Atau WA: <span>+62 853-9585-2011</span> untuk informasi lebih lanjut.</p>
+            <p>Hubungi saya di Discord: <span>kentalmaniz.</span></p>
+            <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Toko Game dan Jasa Joki. Semua hak dilindungi.</p>
+        <p>&copy; 2024 RagingDemonXOwn1. Semua hak dilindungi.</p>
     </footer>
-
-    <!-- JavaScript untuk Sidebar, Transisi, dan Memuat Konten Dinamis -->
-    <script>
-        // Fungsi untuk membuka sidebar
-        function openSidebar() {
-            document.getElementById("mySidebar").style.width = "250px";
-        }
-
-        // Fungsi untuk menutup sidebar
-        function closeSidebar() {
-            document.getElementById("mySidebar").style.width = "0";
-        }
-
-        // Fungsi untuk memuat konten dinamis
-        async function loadPage(page) {
-            const mainContent = document.getElementById('main-content');
-
-            if(page === 'home') {
-                // Tampilkan konten home
-                mainContent.innerHTML = `
-                    <div class="store-info">
-                        <h2>Tentang Website Ini</h2>
-                        <p>
-                            Selamat datang di Toko Game dan Jasa Joki kami. Kami menyediakan berbagai layanan terkait game, seperti penjualan akun, joki leveling, dan pengumpulan item dalam game. Kami berfokus pada permainan Blox Fruit, namun kami juga menawarkan layanan di berbagai game populer lainnya.
-                        </p>
-                        <ul>
-                            <li><span class="highlight">Penjualan akun game siap pakai dengan level tinggi.</span></li>
-                            <li><span class="highlight">Jasa joki leveling hingga level maksimal.</span></li>
-                            <li><span class="highlight">Mengumpulkan buah langka dan item premium.</span></li>
-                            <li><span class="highlight">Layanan joki cepat dan terpercaya.</span></li>
-                        </ul>
-                    </div>
-                `;
-                return;
-            }
-
-            try {
-                const response = await fetch(`${page}/index.html`);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const html = await response.text();
-                mainContent.innerHTML = html;
-            } catch (error) {
-                mainContent.innerHTML = `<p>Maaf, halaman tidak dapat dimuat.</p>`;
-                console.error('Error fetching page:', error);
-            }
-        }
-
-        // Event listener untuk tombol dan link di sidebar
-        document.querySelectorAll('a[data-page]').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const page = this.getAttribute('data-page');
-
-                // Tambahkan kelas fade-out
-                document.body.classList.add('fade-out');
-
-                // Panggil fungsi loadPage setelah sedikit delay untuk animasi
-                setTimeout(() => {
-                    loadPage(page);
-                    document.body.classList.remove('fade-out');
-                    document.body.classList.add('fade-in');
-                }, 500);
-            });
-        });
-
-        // Event listener untuk tombol di dalam konten
-        document.querySelectorAll('.button[data-page]').forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                const page = this.getAttribute('data-page');
-
-                // Tambahkan kelas fade-out
-                document.body.classList.add('fade-out');
-
-                // Panggil fungsi loadPage setelah sedikit delay untuk animasi
-                setTimeout(() => {
-                    loadPage(page);
-                    document.body.classList.remove('fade-out');
-                    document.body.classList.add('fade-in');
-                }, 500);
-            });
-        });
-
-        // Muat konten home saat halaman pertama kali dibuka
-        window.onload = function() {
-            loadPage('home');
-            document.body.classList.add('fade-in');
-        };
-    </script>
 </body>
 </html>
