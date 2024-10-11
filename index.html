@@ -141,13 +141,20 @@
         }
 
         /* Styling khusus untuk Toko Jual Akun */
+        #toko-section .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         #toko-section .avatar {
             border: 3px solid #e0e0e0;
             border-radius: 50%;
             width: 200px;
             height: 200px;
             overflow: hidden;
-            margin: 0 auto 20px auto; /* Centered horizontally */
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
 
@@ -188,7 +195,9 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             font-weight: bold;
             margin-bottom: 30px;
-            display: inline-block;
+            display: block; /* Changed to block for centering */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .button:hover {
@@ -197,7 +206,7 @@
         }
 
         /* Konten Seksi */
-        .account-specs, .screenshot-box, .contact-info {
+        .account-specs, .screenshot-box {
             background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
@@ -209,7 +218,7 @@
             text-align: left;
         }
 
-        .account-specs h3, .screenshot-box h3, .contact-info h3 {
+        .account-specs h3, .screenshot-box h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
@@ -252,6 +261,14 @@
 
         /* Kontak */
         .contact-info {
+            /* Box is inside main-content */
+        }
+
+        .contact-info h3 {
+            text-align: center;
+        }
+
+        .contact-info p {
             text-align: center;
         }
 
@@ -337,14 +354,23 @@
 
     <!-- Seksi Toko Jual Akun (Halaman Utama) -->
     <div class="section active" id="toko-section">
-        <div class="avatar">
-            <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
+        <div class="main-content">
+            <div class="avatar">
+                <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
+            </div>
+            <h2>RagingDemonXOwn1</h2>
+            <h3>ID: 5576044696</h3>
+            
+            <!-- Tombol menuju profil Roblox -->
+            <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
+
+            <!-- Bagian Kontak di dalam Toko Jual Akun -->
+            <div class="contact-info">
+                <h3>Kontak Kami</h3>
+                <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
+                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
+            </div>
         </div>
-        <h2>RagingDemonXOwn1</h2>
-        <h3>ID: 5576044696</h3>
-        
-        <!-- Tombol menuju profil Roblox -->
-        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
 
         <!-- Bagian Spek Akun -->
         <div class="account-specs">
@@ -387,13 +413,6 @@
             </ul>
             <p>Untuk menggunakan layanan joki atau informasi lebih lanjut, silakan hubungi kami melalui Discord atau WhatsApp yang tertera di bawah.</p>
         </div>
-    </div>
-
-    <!-- Bagian Kontak -->
-    <div class="contact-info">
-        <h3>Kontak Kami</h3>
-        <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-        <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
     </div>
 
     <footer>
