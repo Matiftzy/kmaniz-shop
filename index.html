@@ -4,56 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blox Fruit Showcase - RagingDemonXOwn1</title>
+
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
             color: #333;
-            text-align: center;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
+
         header {
-            background-color: #0066cc;
+            background-color: #007bff;
             color: white;
-            padding: 20px;
+            padding: 30px;
+            font-size: 24px;
         }
+
         h1 {
+            font-weight: 600;
             margin: 0;
         }
+
         .container {
-            margin: 20px;
-            padding: 20px;
             background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
         }
+
+        h2 {
+            color: #333;
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+
         img {
             border-radius: 10px;
+            margin: 20px 0;
         }
+
         .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
             background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            padding: 12px 24px;
             text-decoration: none;
             border-radius: 5px;
+            display: inline-block;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
+
         .button:hover {
             background-color: #218838;
         }
+
         footer {
-            background-color: #0066cc;
+            background-color: #007bff;
             color: white;
-            padding: 10px;
-            position: fixed;
+            padding: 15px;
+            position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .contact-info span {
+            font-weight: 600;
+            color: #007bff;
         }
     </style>
 </head>
@@ -61,19 +104,23 @@
     <header>
         <h1>Selamat Datang di Showcase Akun Blox Fruit</h1>
     </header>
-    
+
     <div class="container">
-        <h2>Akun Roblox: <span style="color:blue;">RagingDemonXOwn1</span></h2>
+        <h2>Akun Roblox: <span style="color:#007bff;">RagingDemonXOwn1</span></h2>
         <h3>ID: 5576044696</h3>
         <h3>Level: 1500</h3>
         <p>Buah yang saya miliki: Dragon Fruit</p>
+
         <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5576044696&width=420&height=420&format=png" alt="Avatar Roblox RagingDemonXOwn1" width="200">
         
-        <!-- Tombol yang mengarah ke halaman Roblox -->
+        <!-- Tombol untuk menuju profil Roblox -->
         <br><a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
-
-        <h3>Kontak</h3>
-        <p>Jika ingin bermain bareng, hubungi saya di Discord: <strong>Discord#1234</strong></p>
+        
+        <!-- Bagian Kontak -->
+        <div class="contact-info">
+            <p>Hubungi saya di Discord: <span>kentalmaniz.</span></p>
+            <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
+        </div>
     </div>
 
     <footer>
