@@ -90,6 +90,10 @@
             z-index: 1000;
         }
 
+        .nav-menu.active {
+            display: flex;
+        }
+
         .nav-menu a {
             padding: 10px 20px;
             text-decoration: none;
@@ -181,8 +185,8 @@
             transform: translateY(-3px);
         }
 
-        /* Seksi Toko Jual Akun */
-        #toko-section, #joki-section {
+        /* Seksi Toko Jual Akun dan Joki Akun */
+        .section {
             width: 100%;
             max-width: 800px;
             background: rgba(255, 255, 255, 0.9);
@@ -195,7 +199,7 @@
             transition: opacity 0.5s ease;
         }
 
-        #toko-section.active, #joki-section.active {
+        .section.active {
             display: block;
             opacity: 1;
         }
@@ -273,7 +277,7 @@
                 font-size: 2rem;
             }
 
-            .container, #toko-section, #joki-section {
+            .container, .section {
                 padding: 20px;
             }
 
@@ -333,7 +337,7 @@
     </header>
 
     <!-- Seksi Toko Jual Akun (Halaman Utama) -->
-    <div class="container" id="toko-section" class="active">
+    <div class="section active" id="toko-section">
         <div class="avatar">
             <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
         </div>
@@ -366,7 +370,7 @@
     </div>
 
     <!-- Seksi Joki Akun -->
-    <div class="container" id="joki-section">
+    <div class="section" id="joki-section">
         <div class="avatar">
             <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
         </div>
