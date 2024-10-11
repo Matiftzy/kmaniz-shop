@@ -127,6 +127,8 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            position: relative;
+            transition: opacity 0.5s ease;
         }
 
         .avatar {
@@ -179,7 +181,26 @@
             transform: translateY(-3px);
         }
 
-        .contact-info, .account-specs, .screenshot-box {
+        /* Seksi Toko Jual Akun */
+        #toko-section, #joki-section {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: none; /* Disembunyikan secara default */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #toko-section.active, #joki-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .account-specs, .screenshot-box, .contact-info {
             background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
@@ -191,22 +212,12 @@
             text-align: left;
         }
 
-        .contact-info h3, .account-specs h3, .screenshot-box h3 {
+        .account-specs h3, .screenshot-box h3, .contact-info h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #ff6600;
             text-decoration: underline;
-        }
-
-        .contact-info p, .account-specs p, .screenshot-box p {
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-
-        .contact-info span, .account-specs .label {
-            font-weight: 700;
-            color: #ff6600;
         }
 
         .account-specs ul {
@@ -226,6 +237,12 @@
             color: #ff6600;
             position: absolute;
             left: 0;
+        }
+
+        /* Menyorot Label */
+        .account-specs .label, .contact-info span {
+            font-weight: 700;
+            color: #ff6600;
         }
 
         /* Styling untuk Screenshot Akun */
@@ -256,7 +273,7 @@
                 font-size: 2rem;
             }
 
-            .container {
+            .container, #toko-section, #joki-section {
                 padding: 20px;
             }
 
@@ -278,11 +295,7 @@
                 padding: 10px 20px;
             }
 
-            .contact-info, .account-specs, .screenshot-box {
-                padding: 15px;
-            }
-
-            .account-specs h3, .screenshot-box h3 {
+            .account-specs h3, .screenshot-box h3, .contact-info h3 {
                 font-size: 1.2rem;
             }
 
@@ -313,13 +326,14 @@
                 <div class="line3"></div>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#toko">Toko Jual Akun</a>
-                <a href="#joki">Joki Akun</a>
+                <a href="#toko-section">Toko Jual Akun</a>
+                <a href="#joki-section">Joki Akun</a>
             </div>
         </nav>
     </header>
 
-    <div class="container">
+    <!-- Seksi Toko Jual Akun (Halaman Utama) -->
+    <div class="container" id="toko-section" class="active">
         <div class="avatar">
             <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
         </div>
@@ -330,7 +344,7 @@
         <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
 
         <!-- Bagian Spek Akun -->
-        <div class="account-specs" id="spek-akun">
+        <div class="account-specs">
             <h3>Spek Akun (Blox Fruit)</h3>
             <ul>
                 <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit</li>
@@ -345,66 +359,87 @@
         </div>
 
         <!-- Bagian Screenshot Akun -->
-        <div class="screenshot-box" id="screenshot-akun">
+        <div class="screenshot-box">
             <h3>Screenshot Akun</h3>
             <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
         </div>
+    </div>
 
-        <!-- Bagian Toko Jual Akun -->
-        <div class="account-specs" id="toko">
-            <h3>Toko Jual Akun</h3>
-            <p>Selamat datang di Toko Jual Akun kManiz! Kami menyediakan berbagai macam akun Roblox yang siap pakai dengan spek tinggi dan harga terjangkau. Berikut adalah beberapa alasan mengapa kamu harus memilih kami:</p>
-            <ul>
-                <li>**Akun Berkualitas:** Semua akun yang kami jual telah diverifikasi dan aman digunakan.</li>
-                <li>**Harga Terjangkau:** Kami menawarkan harga yang kompetitif untuk berbagai spek akun.</li>
-                <li>**Layanan Cepat:** Pengiriman akun dilakukan secara cepat dan efisien.</li>
-                <li>**Dukungan Pelanggan:** Tim support kami siap membantu kamu 24/7.</li>
-            </ul>
-            <p>Untuk pembelian akun atau informasi lebih lanjut, silakan hubungi kami melalui Discord atau WhatsApp yang tertera di bawah.</p>
+    <!-- Seksi Joki Akun -->
+    <div class="container" id="joki-section">
+        <div class="avatar">
+            <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
         </div>
+        <h2>Joki Akun</h2>
+        <h3>ID: 5576044696</h3>
+        
+        <!-- Tombol menuju profil Roblox -->
+        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
 
         <!-- Bagian Joki Akun -->
-        <div class="account-specs" id="joki">
-            <h3>Joki Akun</h3>
+        <div class="account-specs">
+            <h3>Joki Akun dari kManiz</h3>
             <p>Selamat datang di layanan Joki Akun kManiz! Kami menyediakan layanan joki untuk berbagai permainan termasuk Roblox, memastikan akun kamu mendapatkan peningkatan level, item, dan prestasi tanpa harus menghabiskan waktu berjam-jam. Berikut adalah layanan yang kami tawarkan:</p>
             <ul>
-                <li>**Peningkatan Level:** Kami membantu meningkatkan level akun kamu hingga level maksimal dengan cepat dan aman.</li>
-                <li>**Item Eksklusif:** Mendapatkan item eksklusif dan langka yang sulit diperoleh sendiri.</li>
-                <li>**Prestasi:** Mencapai prestasi dan penghargaan tertentu yang dapat meningkatkan reputasi akun kamu.</li>
-                <li>**Keamanan Terjamin:** Semua layanan kami dilakukan dengan memperhatikan keamanan dan privasi akun kamu.</li>
+                <li><strong>Peningkatan Level:</strong> Kami membantu meningkatkan level akun kamu hingga level maksimal dengan cepat dan aman.</li>
+                <li><strong>Item Eksklusif:</strong> Mendapatkan item eksklusif dan langka yang sulit diperoleh sendiri.</li>
+                <li><strong>Prestasi:</strong> Mencapai prestasi dan penghargaan tertentu yang dapat meningkatkan reputasi akun kamu.</li>
+                <li><strong>Keamanan Terjamin:</strong> Semua layanan kami dilakukan dengan memperhatikan keamanan dan privasi akun kamu.</li>
             </ul>
             <p>Untuk menggunakan layanan joki atau informasi lebih lanjut, silakan hubungi kami melalui Discord atau WhatsApp yang tertera di bawah.</p>
         </div>
+    </div>
 
-        <!-- Bagian Kontak -->
-        <div class="contact-info">
-            <h3>Kontak Kami</h3>
-            <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-            <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
-        </div>
+    <!-- Bagian Kontak -->
+    <div class="contact-info">
+        <h3>Kontak Kami</h3>
+        <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
+        <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
     </div>
 
     <footer>
         <p>&copy; 2024 kManiz Shop. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- JavaScript untuk Hamburger Menu -->
+    <!-- JavaScript untuk Hamburger Menu dan Transisi -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
+        const tokoSection = document.getElementById('toko-section');
+        const jokiSection = document.getElementById('joki-section');
+        const navLinks = document.querySelectorAll('.nav-menu a');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked (optional)
-        const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href');
+
+                // Menutup menu setelah klik
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+
+                // Mengatur tampilan sekumpulan seksi
+                if (target === '#toko-section') {
+                    tokoSection.classList.add('active');
+                    jokiSection.classList.remove('active');
+                } else if (target === '#joki-section') {
+                    jokiSection.classList.add('active');
+                    tokoSection.classList.remove('active');
+                }
+
+                // Scroll ke seksi yang dipilih
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
             });
+        });
+
+        // Menampilkan Toko Jual Akun saat halaman pertama dibuka
+        window.addEventListener('DOMContentLoaded', () => {
+            tokoSection.classList.add('active');
         });
     </script>
 </body>
