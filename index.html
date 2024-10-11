@@ -1,121 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blox Fruit Showcase - RagingDemonXOwn1</title>
-
-    <!-- Import Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
         header {
-            background-color: #007bff;
-            color: white;
-            padding: 30px;
-            font-size: 24px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        h1 {
-            font-weight: 600;
-            margin: 0;
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .container {
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
+        .avatar {
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
         h2 {
-            color: #333;
-            font-size: 26px;
-            margin: 10px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffcc00;
         }
 
         h3 {
-            color: #555;
-            font-size: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
 
         p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        img {
-            border-radius: 10px;
-            margin: 20px 0;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
         }
 
         .button {
-            background-color: #28a745;
-            color: white;
-            font-size: 18px;
+            background-color: #ffcc00;
+            color: #1e3c72;
+            font-size: 1rem;
             padding: 12px 24px;
             text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
 
         .button:hover {
-            background-color: #218838;
-        }
-
-        footer {
-            background-color: #007bff;
-            color: white;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            background-color: #e6b800;
+            transform: translateY(-3px);
         }
 
         .contact-info {
-            margin-top: 30px;
-            font-size: 18px;
-            line-height: 1.6;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            color: #ffffff;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .contact-info span {
-            font-weight: 600;
-            color: #007bff;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3, p {
+                font-size: 1rem;
+            }
+
+            .button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .contact-info {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Showcase Akun Blox Fruit</h1>
+        <h1>Showcase Akun Blox Fruit</h1>
     </header>
 
     <div class="container">
-        <h2>Akun Roblox: <span style="color:#007bff;">RagingDemonXOwn1</span></h2>
+        <div class="avatar">
+            <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5576044696&width=420&height=420&format=png" alt="Avatar Roblox RagingDemonXOwn1">
+        </div>
+        <h2>RagingDemonXOwn1</h2>
         <h3>ID: 5576044696</h3>
         <h3>Level: 1500</h3>
         <p>Buah yang saya miliki: Dragon Fruit</p>
+        
+        <!-- Tombol menuju profil Roblox -->
+        <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
 
-        <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5576044696&width=420&height=420&format=png" alt="Avatar Roblox RagingDemonXOwn1" width="200">
-        
-        <!-- Tombol untuk menuju profil Roblox -->
-        <br><a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
-        
         <!-- Bagian Kontak -->
         <div class="contact-info">
             <p>Hubungi saya di Discord: <span>kentalmaniz.</span></p>
@@ -124,7 +204,7 @@
     </div>
 
     <footer>
-        <p>Copyright © 2024 RagingDemonXOwn1</p>
+        <p>&copy; 2024 RagingDemonXOwn1. Semua hak dilindungi.</p>
     </footer>
 </body>
 </html>
