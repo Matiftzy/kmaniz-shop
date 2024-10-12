@@ -307,6 +307,62 @@
             font-size: 0.9rem;
         }
 
+        /* Styling untuk Fighting Styles */
+        .fighting-styles {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+            text-align: center;
+        }
+
+        .fighting-styles h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .fighting-styles .fighting-style {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .fighting-styles .fighting-style img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fighting-styles .fighting-style p {
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            background: #f1f1f1;
+            color: #333333;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
         /* Responsiveness */
         @media (max-width: 600px) {
             header h1 {
@@ -356,6 +412,21 @@
             .list-joki-box .v4-things li {
                 display: block;
                 margin: 5px 0;
+            }
+
+            /* Fighting Styles Responsive */
+            .fighting-styles .fighting-style {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .fighting-styles .fighting-style img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .fighting-styles .fighting-style p {
+                text-align: center;
             }
         }
     </style>
@@ -433,6 +504,7 @@
                 <li><strong>Item Eksklusif:</strong> Mendapatkan item eksklusif dan langka yang sulit diperoleh sendiri.</li>
                 <li><strong>Prestasi:</strong> Mencapai prestasi dan penghargaan tertentu yang dapat meningkatkan reputasi akun kamu.</li>
                 <li><strong>Keamanan Terjamin:</strong> Semua layanan kami dilakukan dengan memperhatikan keamanan dan privasi akun kamu.</li>
+                <li><strong>Upgrade V3:</strong> 4RB</li> <!-- Ditambahkan sesuai permintaan -->
             </ul>
         </div>
 
@@ -475,6 +547,39 @@
                     <li>Gear: 3RB/1 Gear/Train</li>
                     <li>Full Gear: 10k</li>
                 </ul>
+            </div>
+        </div>
+
+        <!-- List Fighting Styles -->
+        <div class="fighting-styles">
+            <h3>Fighting Styles</h3>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/8/83/Sanguine_Art.png/revision/latest/scale-to-width-down/125?cb=20231025151119" alt="Sanguine Art">
+                <p><strong>Sanguine Art:</strong> 35RB, Termasuk bahan bahannya</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/4/41/Godhuman.png/revision/latest/scale-to-width-down/125?cb=20220913103851" alt="God Human">
+                <p><strong>God Human:</strong> 10RB, Termasuk bahan bahannya & Mastery dari FS V2</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/e/e9/Dragon_Talon.png/revision/latest/scale-to-width-down/125?cb=20220228215538" alt="Dragon Talon">
+                <p><strong>Dragon Talon:</strong> 5RB</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/b/b3/Sharkman_Karate.png/revision/latest/scale-to-width-down/125?cb=20220228233224" alt="Sharkman Karate">
+                <p><strong>Sharkman Karate:</strong> 5RB</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/0/00/Electric_Claw.png/revision/latest/scale-to-width-down/125?cb=20220228215956" alt="Electric Claw">
+                <p><strong>Electric Claw:</strong> 3RB</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/8/89/Death_Step.png/revision/latest/scale-to-width-down/125?cb=20220228233624" alt="Death Step">
+                <p><strong>Death Step:</strong> 5RB</p>
+            </div>
+            <div class="fighting-style">
+                <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/a/ad/Superhuman.png/revision/latest/scale-to-width-down/125?cb=20220228215748" alt="Super Human">
+                <p><strong>Super Human:</strong> 5RB</p>
             </div>
         </div>
     </div>
