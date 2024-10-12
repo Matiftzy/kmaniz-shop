@@ -11,7 +11,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="kManiz Shop - Jual dan Joki Akun Roblox Blox Fruit">
     <meta property="og:description" content="Kunjungi kManiz Shop untuk membeli akun Roblox Blox Fruit atau menggunakan layanan Joki akun. Dapatkan akun-akun terbaik dengan berbagai spek gacor!">
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1253220827441401931/1294464934255530105/Screenshot_17.png">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1253220827441401931/1294464934255530105/Screenshot_17.png?ex=670b1bea&is=6709ca6a&hm=72a1e35fc48ed266724430c6ee97cd4a514a7456492dbee9cdbeae6c92c54b1e&=&format=webp&quality=lossless&width=605&height=324">
     <meta property="og:url" content="https://matiftzy.github.io/kmaniz-shop/">
     <meta property="og:type" content="website">
 
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="kManiz Shop - Jual dan Joki Akun Roblox Blox Fruit">
     <meta name="twitter:description" content="Kunjungi kManiz Shop untuk membeli akun Roblox Blox Fruit atau menggunakan layanan Joki akun. Dapatkan akun-akun terbaik dengan berbagai spek gacor!">
-    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1253220827441401931/1294464934255530105/Screenshot_17.png">
+    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1253220827441401931/1294464934255530105/Screenshot_17.png?ex=670b1bea&is=6709ca6a&hm=72a1e35fc48ed266724430c6ee97cd4a514a7456492dbee9cdbeae6c92c54b1e&=&format=webp&quality=lossless&width=605&height=324">
 
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -219,7 +219,7 @@
         }
 
         /* Konten Seksi */
-        .account-specs, .screenshot-box, .contact-info, .list-joki-box, .sword-gun-box {
+        .account-specs, .screenshot-box, .contact-info, .list-joki-box {
             background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
@@ -231,7 +231,7 @@
             text-align: left;
         }
 
-        .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3, .sword-gun-box h3 {
+        .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
@@ -239,19 +239,19 @@
             text-decoration: underline;
         }
 
-        .account-specs ul, .list-joki-box ul, .sword-gun-box ul {
+        .account-specs ul, .list-joki-box ul {
             list-style: none;
             text-align: left;
         }
 
-        .account-specs li, .list-joki-box li, .sword-gun-box li {
+        .account-specs li, .list-joki-box li {
             margin-bottom: 10px;
             font-size: 1rem;
             padding-left: 20px;
             position: relative;
         }
 
-        .account-specs li::before, .list-joki-box li::before, .sword-gun-box li::before {
+        .account-specs li::before, .list-joki-box li::before {
             content: "•";
             color: #ff6600;
             position: absolute;
@@ -292,14 +292,62 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Styling untuk Sword & Gun */
-        .sword-gun-box .sword-gun {
+        /* Kontak */
+        .contact-info {
+            /* Box is inside main-content */
+        }
+
+        .contact-info h3 {
+            text-align: center;
+        }
+
+        .contact-info p {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            background: #f1f1f1;
+            color: #333333;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Styling untuk Fighting Styles */
+        .fighting-styles {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+            text-align: center;
+        }
+
+        .fighting-styles h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .fighting-styles .fighting-style {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
 
-        .sword-gun-box .sword-gun img {
+        .fighting-styles .fighting-style img {
             width: 100px;
             height: 100px;
             border-radius: 10px;
@@ -308,7 +356,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .sword-gun-box .sword-gun p {
+        .fighting-styles .fighting-style p {
             text-align: left;
             font-size: 1rem;
         }
@@ -356,11 +404,11 @@
                 padding: 10px 20px;
             }
 
-            .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3, .sword-gun-box h3 {
+            .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
                 font-size: 1.2rem;
             }
 
-            .account-specs li, .screenshot-box img, .list-joki-box li, .sword-gun-box li {
+            .account-specs li, .screenshot-box img, .list-joki-box li {
                 font-size: 0.9rem;
             }
 
@@ -391,21 +439,6 @@
             }
 
             .fighting-styles .fighting-style p {
-                text-align: center;
-            }
-
-            /* Sword & Gun Responsive */
-            .sword-gun-box .sword-gun {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .sword-gun-box .sword-gun img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-            .sword-gun-box .sword-gun p {
                 text-align: center;
             }
         }
@@ -445,7 +478,7 @@
             <div class="contact-info">
                 <h3>Kontak Kami</h3>
                 <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
+                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini atau ingin informasi tentang akunnya yang lebih lanjut.</p>
             </div>
         </div>
 
@@ -467,7 +500,7 @@
         <!-- Bagian Screenshot Akun -->
         <div class="screenshot-box">
             <h3>Screenshot Akun</h3>
-            <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg" alt="Screenshot Akun RagingDemonXOwn1">
+            <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
         </div>
     </div>
 
@@ -545,67 +578,71 @@
         <div class="fighting-styles">
             <h3>Fighting Styles</h3>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459561922531379/125.png" alt="Sanguine Art">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459561922531379/125.png?ex=670b16e9&is=6709c569&hm=124dbc968ce836e191cf128b52607c1c52f8a2ecd169920cc0ea1c1bcbcebd1d&=&format=webp&quality=lossless&width=137&height=137" alt="Sanguine Art">
                 <p><strong>Sanguine Art:</strong> 35RB, Termasuk bahan bahannya</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459686795346051/125.png" alt="God Human">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459686795346051/125.png?ex=670b1707&is=6709c587&hm=2dbada4fdcb991dcd12cbcaa8ae78392d0e1c83e0e22907346d8c7b3cfbd2e2f&=&format=webp&quality=lossless&width=137&height=137" alt="God Human">
                 <p><strong>God Human:</strong> 10RB, Termasuk bahan bahannya & Mastery dari FS V2</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459781418975313/125.png" alt="Dragon Talon">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459781418975313/125.png?ex=670b171d&is=6709c59d&hm=f0a9708114e85c7d180fc8a265c3f864768ce50d3e227efd695b2e3d3bfbb561&=&format=webp&quality=lossless&width=137&height=137" alt="Dragon Talon">
                 <p><strong>Dragon Talon:</strong> 5RB</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459954043945072/125.png" alt="Electric Claw">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459954043945072/125.png?ex=670b1746&is=6709c5c6&hm=a00e955144a954257135182aa91d0407b207e71d7495574222d73c490fccd885&=&format=webp&quality=lossless&width=137&height=137" alt="Electric Claw">
                 <p><strong>Electric Claw:</strong> 3RB</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459854806843433/125.png" alt="Sharkman Karate">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294459854806843433/125.png?ex=670b172f&is=6709c5af&hm=d22136ea8ce7c1adec992e020ec5fb98792d8bd0ee828444f849b6b46f8f91e5&=&format=webp&quality=lossless&width=137&height=137" alt="Sharkman Karate">
                 <p><strong>Sharkman Karate:</strong> 5RB</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294460159380422696/125.png" alt="Death Step">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294460159380422696/125.png?ex=670b1777&is=6709c5f7&hm=cfdbbac7f0fe21634ed5cb5cf6601465b0791cae31eac9bde13f1acb4466bebe&=&format=webp&quality=lossless&width=137&height=137" alt="Death Step">
                 <p><strong>Death Step:</strong> 5RB</p>
             </div>
             <div class="fighting-style">
-                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294460342159802513/125.png" alt="Super Human">
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294460342159802513/125.png?ex=670b17a3&is=6709c623&hm=baf6463a2366866fed4b2678143d998cd4a1baa90e86ce26fda536363fc02f6f&=&format=webp&quality=lossless&width=137&height=137" alt="Super Human">
                 <p><strong>Super Human:</strong> 5RB</p>
             </div>
         </div>
+        <!-- Sword & Gun Section -->
+<div class="sword-gun">
+    <h3>Sword & Gun</h3>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500717247201422/110.png?ex=670b3d3d&is=6709ebbd&hm=dd3057b5c23b2a4e38120277e0412f70c6b3922c1d0b6ba4da193fd135633c86&=&format=webp&quality=lossless&width=121&height=121" alt="CDK">
+        <p><strong>CDK:</strong> 25RB</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500861560488101/110.png?ex=670b3d60&is=6709ebe0&hm=790649f84d55c4b0f0e97d7b7b119dda94d7609fc8907e5d78928199026a79af&=&format=webp&quality=lossless&width=121&height=121" alt="Yama">
+        <p><strong>Yama:</strong> 15RB (Bonus $MONEY)</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500936714031224/110.png?ex=670b3d71&is=6709ebf1&hm=2cb25fe402e3aa898e87fdc3c128b5af5c3eacb68462ba9d0421d0846bafa712&=&format=webp&quality=lossless&width=121&height=121" alt="Tushita">
+        <p><strong>Tushita:</strong> 10RB</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501023205036052/110.png?ex=670b3d86&is=6709ec06&hm=d5dbc47d4043411a6abcc859261f5fec5b0c7be3c65e331cf2175cb59e771d8c&=&format=webp&quality=lossless&width=121&height=121" alt="Hallow Scythe">
+        <p><strong>Hallow Scythe:</strong> 15RB (Bonus $MONEY)</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501118839095348/110.png?ex=670b3d9d&is=6709ec1d&hm=cd8cba85cda1dccc2f4e29833340adff2a5090f0c40718bf5b0b239f4a853ea5&=&format=webp&quality=lossless&width=121&height=121" alt="True Triple Katana">
+        <p><strong>True Triple Katana:</strong> 10RB (Not Ready Belly: 15RB)</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501194433167501/110.png?ex=670b3daf&is=6709ec2f&hm=48e42140835135a3c01eb34026eb0a8db167d1df4c6442678f175eb2968c31f7&=&format=webp&quality=lossless&width=121&height=121" alt="Fox Lamp">
+        <p><strong>Fox Lamp:</strong> 15RB</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501254499667998/110.png?ex=670b3dbd&is=6709ec3d&hm=fcddcecce379b27a2ec4c393d7e6a5386ff4d7c31c8b2b1f690a62da5966960e&=&format=webp&quality=lossless&width=121&height=121" alt="Shark Anchor">
+        <p><strong>Shark Anchor:</strong> 10RB (Not Ready Magnet: 20RB)</p>
+    </div>
+    <div class="sword-item">
+        <img src="https://media.discordapp.net/attachments/1294492476580560949/1294503533848301598/110.png?ex=670b3fdd&is=6709ee5d&hm=30decb23a460c071a5cd9e58c38325d6a38bfef08ac6118d3a418526d9cff8f4&=&format=webp&quality=lossless&width=121&height=121" alt="Soul Guitar">
+        <p><strong>Soul Guitar:</strong> 5RB (Not Ready Requirements: 25RB)</p>
+    </div>
+</div>
 
-        <!-- List Sword & Gun -->
-        <div class="sword-gun-box">
-            <h3>Sword & Gun</h3>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500717247201422/110.png" alt="CDK">
-                <p><strong>CDK:</strong> 25RB</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500861560488101/110.png" alt="Yama">
-                <p><strong>Yama:</strong> 15RB (Bonus $MONEY)</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294500936714031224/110.png" alt="Tushita">
-                <p><strong>Tushita:</strong> 10RB</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501023205036052/110.png" alt="Hallow Scythe">
-                <p><strong>Hallow Scythe:</strong> 15RB (Bonus $MONEY)</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501118839095348/110.png" alt="True Triple Katana">
-                <p><strong>True Triple Katana:</strong> 10RB (Not Ready Belly: 15RB)</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501194433167501/110.png" alt="Fox Lamp">
-                <p><strong>Fox Lamp:</strong> 15RB</p>
-            </div>
-            <div class="sword-gun">
-                <img src="https://media.discordapp.net/attachments/1294492476580560949/1294501254499667998/110.png" alt="Shark Anchor">
-                <p><strong>Shark Anchor:</strong> 10RB (Not Ready Magnet: 20RB)</p>
-            </div>
-        </div>
     </div>
 
     <footer>
