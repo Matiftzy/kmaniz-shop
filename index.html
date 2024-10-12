@@ -172,14 +172,14 @@
             text-align: center; /* Ensure texts are centered */
         }
 
-        h2 {
+        #toko-section h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             margin-bottom: 10px;
             color: #ff6600;
         }
 
-        h3 {
+        #toko-section h3 {
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: #555555;
@@ -206,7 +206,7 @@
         }
 
         /* Konten Seksi */
-        .account-specs, .screenshot-box {
+        .account-specs, .screenshot-box, .contact-info, .list-joki-box {
             background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
@@ -218,7 +218,7 @@
             text-align: left;
         }
 
-        .account-specs h3, .screenshot-box h3 {
+        .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
@@ -226,23 +226,43 @@
             text-decoration: underline;
         }
 
-        .account-specs ul {
+        .account-specs ul, .list-joki-box ul {
             list-style: none;
             text-align: left;
         }
 
-        .account-specs li {
+        .account-specs li, .list-joki-box li {
             margin-bottom: 10px;
             font-size: 1rem;
             padding-left: 20px;
             position: relative;
         }
 
-        .account-specs li::before {
+        .account-specs li::before, .list-joki-box li::before {
             content: "•";
             color: #ff6600;
             position: absolute;
             left: 0;
+        }
+
+        /* Highlighted V4 Things */
+        .list-joki-box .v4-things {
+            font-weight: bold;
+            color: #ff6600;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .list-joki-box .v4-things ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .list-joki-box .v4-things li {
+            display: inline-block;
+            margin: 5px 10px;
         }
 
         /* Menyorot Label */
@@ -315,11 +335,11 @@
                 padding: 10px 20px;
             }
 
-            .account-specs h3, .screenshot-box h3, .contact-info h3 {
+            .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
                 font-size: 1.2rem;
             }
 
-            .account-specs li, .screenshot-box img {
+            .account-specs li, .screenshot-box img, .list-joki-box li {
                 font-size: 0.9rem;
             }
 
@@ -330,6 +350,12 @@
 
             .nav-menu a {
                 padding: 10px 15px;
+            }
+
+            /* V4 Things responsive */
+            .list-joki-box .v4-things li {
+                display: block;
+                margin: 5px 0;
             }
         }
     </style>
@@ -397,10 +423,7 @@
     <!-- Seksi Joki Akun -->
     <div class="section" id="joki-section">
         <h2>Joki Akun</h2>
-        <!-- ID dihapus -->
         
-        <!-- Tombol menuju profil Roblox dihapus -->
-
         <!-- Bagian Joki Akun -->
         <div class="account-specs">
             <h3>Joki Akun dari kManiz</h3>
@@ -411,7 +434,48 @@
                 <li><strong>Prestasi:</strong> Mencapai prestasi dan penghargaan tertentu yang dapat meningkatkan reputasi akun kamu.</li>
                 <li><strong>Keamanan Terjamin:</strong> Semua layanan kami dilakukan dengan memperhatikan keamanan dan privasi akun kamu.</li>
             </ul>
-            <p>Untuk menggunakan layanan joki atau informasi lebih lanjut, silakan hubungi kami melalui Discord atau WhatsApp yang tertera di bawah.</p>
+        </div>
+
+        <!-- List Joki Blox Fruit -->
+        <div class="list-joki-box">
+            <h3>List Joki Blox Fruit</h3>
+            <ul>
+                <li><strong>Level:</strong> 1RB/100 Level</li>
+                <li><strong>Mastery:</strong>
+                    <ul>
+                        <li>1RB/100 Mastery (Third Sea)</li>
+                        <li>2RB/100 Mastery (Second Sea)</li>
+                        <li>3RB/100 Mastery (First Sea)</li>
+                    </ul>
+                </li>
+                <li><strong>Money:</strong>
+                    <ul>
+                        <li>1RB/$1M (Third Sea)</li>
+                        <li>2RB/$1M Mastery (Second Sea)</li>
+                        <li>3RB/$1M Mastery (First Sea)</li>
+                    </ul>
+                </li>
+                <li><strong>Fragments:</strong> 1RB/1k Fragments</li>
+                <li><strong>Awaken Fruit:</strong>
+                    <ul>
+                        <li>1RB/Raid Normal</li>
+                        <li>2RB/Raid Special</li>
+                    </ul>
+                </li>
+                <li><strong>Upgrade V2:</strong> 2RB</li>
+                <li><strong>Upgrade V3:</strong> 4RB</li>
+            </ul>
+
+            <!-- V4 Things -->
+            <div class="v4-things">
+                <h4>V4 Things</h4>
+                <ul>
+                    <li>Get Mirror Fractal: 5k</li>
+                    <li>Get Blue Gear: 5k</li>
+                    <li>Gear: 3RB/1 Gear/Train</li>
+                    <li>Full Gear: 10k</li>
+                </ul>
+            </div>
         </div>
     </div>
 
