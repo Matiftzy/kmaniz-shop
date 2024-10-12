@@ -284,25 +284,45 @@
             color: #ff6600;
         }
 
-        /* Styling untuk Screenshot Akun */
-        .screenshot-box img {
+        /* Styling untuk Fighting Styles */
+        .fighting-styles {
+            background: #f1f1f1; /* Background abu-abu */
+            border-radius: 10px;
+            padding: 20px;
             width: 100%;
-            height: auto;
-            border-radius: 10px; /* Membuat sudut gambar halus */
+            max-width: 700px;
+            margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+            text-align: center;
+        }
+
+        .fighting-styles h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        .fighting-styles .fighting-style {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .fighting-styles .fighting-style img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Kontak */
-        .contact-info {
-            /* Box is inside main-content */
-        }
-
-        .contact-info h3 {
-            text-align: center;
-        }
-
-        .contact-info p {
-            text-align: center;
+        .fighting-styles .fighting-style p {
+            text-align: left;
+            font-size: 1rem;
         }
 
         /* Kotak Baru Sword & Gun */
@@ -427,18 +447,6 @@
                 text-align: center;
             }
 
-            .fighting-styles {
-                background: #f1f1f1;
-                border-radius: 10px;
-                padding: 20px;
-                width: 100%;
-                max-width: 700px;
-                margin-top: 30px;
-                color: #333333;
-                margin-bottom: 30px;
-                text-align: center;
-            }
-            
             /* Sword & Gun Responsive */
             .sword-gun .item {
                 flex-direction: column;
@@ -490,7 +498,7 @@
             <div class="contact-info">
                 <h3>Kontak Kami</h3>
                 <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini.</p>
+                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini atau ingin informasi tentang akunnya yang lebih lanjut.</p>
             </div>
         </div>
 
@@ -619,7 +627,7 @@
             </div>
         </div>
 
-        <!-- Sword & Gun Section -->
+        <!-- List Sword & Gun -->
         <div class="sword-gun">
             <h3>Sword & Gun</h3>
             <div class="item">
