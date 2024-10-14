@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://media.discordapp.net/attachments/1253220827441401931/1294464934255530105/Screenshot_17.png?ex=670b1bea&is=6709ca6a&hm=72a1e35fc48ed266724430c6ee97cd4a514a7456492dbee9cdbeae6c92c54b1e&=&format=webp&quality=lossless&width=605&height=324">
 
     <!-- Import Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
         /* Reset CSS */
@@ -32,20 +32,21 @@
             box-sizing: border-box;
         }
 
-        /* Body */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #141414;
-            color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            background-image: url('https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149009213.jpg');
+            background-size: cover;
+            background-position: center;
             scroll-behavior: smooth; /* Smooth Scrolling */
         }
 
-        /* Header */
         header {
             width: 100%;
             text-align: center;
@@ -54,20 +55,23 @@
         }
 
         header h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #e3e3e3;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+            letter-spacing: 2px;
+            color: #333333;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            transition: opacity 0.5s ease;
         }
 
-        /* Navigation */
+        /* Navigasi */
         nav {
             position: absolute;
             top: 10px;
             right: 20px;
         }
 
-        /* Hamburger Menu */
+        /* Hamburger Icon */
         .hamburger {
             width: 30px;
             height: 25px;
@@ -80,19 +84,22 @@
         .hamburger div {
             width: 100%;
             height: 4px;
-            background-color: #e3e3e3;
+            background-color: #333333;
             border-radius: 2px;
             transition: all 0.3s ease;
         }
 
+        /* Dropdown Menu */
         .nav-menu {
             display: none;
             flex-direction: column;
             position: absolute;
             top: 35px;
             right: 0;
-            background-color: #1c1c1c;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 200px;
             z-index: 1000;
         }
@@ -104,14 +111,16 @@
         .nav-menu a {
             padding: 10px 20px;
             text-decoration: none;
-            color: #ffffff;
+            color: #333333;
+            font-family: 'Montserrat', sans-serif;
             transition: background-color 0.3s ease;
         }
 
         .nav-menu a:hover {
-            background-color: #343434;
+            background-color: #f1f1f1;
         }
 
+        /* Toggle Menu Display */
         .hamburger.active .line1 {
             transform: rotate(-45deg) translate(-5px, 6px);
         }
@@ -124,16 +133,16 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        /* Section */
+        /* Seksi */
         .section {
             width: 100%;
             max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-            display: none;
+            display: none; /* Disembunyikan secara default */
             opacity: 0;
             transition: opacity 0.5s ease;
             position: relative;
@@ -144,7 +153,51 @@
             opacity: 1;
         }
 
-        /* Button */
+        /* Styling khusus untuk Toko Jual Akun */
+        #toko-section .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #toko-section .avatar {
+            border: 3px solid #e0e0e0;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        #toko-section .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #toko-section .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        #toko-section h2, #toko-section h3, #toko-section .button {
+            text-align: center; /* Ensure texts are centered */
+        }
+
+        #toko-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff6600;
+        }
+
+        #toko-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
         .button {
             background-color: #ff6600;
             color: #ffffff;
@@ -155,7 +208,7 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             font-weight: bold;
             margin-bottom: 30px;
-            display: block;
+            display: block; /* Changed to block for centering */
             margin-left: auto;
             margin-right: auto;
         }
@@ -165,7 +218,7 @@
             transform: translateY(-3px);
         }
 
-        /* Image */
+        /* Konten Seksi */
         .screenshot-box img {
             max-width: 100%;
             height: auto;
@@ -173,33 +226,21 @@
             margin-bottom: 15px;
         }
 
-        /* Avatar */
-        .avatar {
-            border: 3px solid #444444;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Content Boxes */
-        .account-specs, .contact-info, .list-joki-box {
-            background: #202020;
+        
+        .account-specs, .screenshot-box, .contact-info, .list-joki-box {
+            background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
             width: 100%;
-            color: #f0f0f0;
+            max-width: 700px;
             margin-top: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
+            text-align: left;
         }
 
-        .account-specs h3, .contact-info h3, .list-joki-box h3 {
+        .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #ff6600;
@@ -208,7 +249,7 @@
 
         .account-specs ul, .list-joki-box ul {
             list-style: none;
-            padding-left: 0;
+            text-align: left;
         }
 
         .account-specs li, .list-joki-box li {
@@ -245,20 +286,27 @@
             margin: 5px 10px;
         }
 
-        /* Fighting Styles */
+        /* Menyorot Label */
+        .account-specs .label, .contact-info span {
+            font-weight: 700;
+            color: #ff6600;
+        }
+
+        /* Styling untuk Fighting Styles */
         .fighting-styles {
-            background: #202020;
+            background: #f1f1f1; /* Background abu-abu */
             border-radius: 10px;
             padding: 20px;
             width: 100%;
             max-width: 700px;
             margin-top: 30px;
-            color: #f0f0f0;
-            margin-bottom: 30px;
+            color: #333333;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah box */
             text-align: center;
         }
 
         .fighting-styles h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #ff6600;
@@ -269,8 +317,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
         .fighting-styles .fighting-style img {
@@ -279,7 +325,7 @@
             border-radius: 10px;
             margin-right: 20px;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .fighting-styles .fighting-style p {
@@ -287,20 +333,21 @@
             font-size: 1rem;
         }
 
-        /* Sword & Gun */
+        /* Kotak Baru Sword & Gun */
         .sword-gun {
-            background: #202020;
+            background: #f1f1f1;
             border-radius: 10px;
             padding: 20px;
             width: 100%;
             max-width: 700px;
             margin-top: 30px;
-            color: #f0f0f0;
+            color: #333333;
             margin-bottom: 30px;
             text-align: center;
         }
 
         .sword-gun h3 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #ff6600;
@@ -311,8 +358,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
         .sword-gun .item img {
@@ -321,52 +366,10 @@
             border-radius: 10px;
             margin-right: 20px;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .sword-gun .item p {
-            text-align: left;
-            font-size: 1rem;
-        }
-
-        /* Materials */
-        .materials {
-            background: #202020;
-            border-radius: 10px;
-            padding: 20px;
-            width: 100%;
-            max-width: 700px;
-            margin-top: 30px;
-            color: #f0f0f0;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .materials h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #ff6600;
-            text-decoration: underline;
-        }
-
-        .materials .item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .materials .item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            margin-right: 20px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .materials .item p {
             text-align: left;
             font-size: 1rem;
         }
@@ -377,31 +380,13 @@
             width: 100%;
             text-align: center;
             padding: 15px 0;
-            background: #141414;
-            color: #e0e0e0;
-            border-top: 1px solid #303030;
+            background: #f1f1f1;
+            color: #333333;
+            border-top: 1px solid #e0e0e0;
         }
 
         footer p {
             font-size: 0.9rem;
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #202020;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #ff6600;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #e65c00;
         }
 
         /* Responsiveness */
@@ -414,9 +399,17 @@
                 padding: 20px;
             }
 
-            .avatar {
+            #toko-section .avatar {
                 width: 150px;
                 height: 150px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3, p {
+                font-size: 1rem;
             }
 
             .button {
@@ -424,11 +417,11 @@
                 padding: 10px 20px;
             }
 
-            .account-specs h3, .contact-info h3, .list-joki-box h3, .fighting-styles h3, .sword-gun h3, .materials h3 {
+            .account-specs h3, .screenshot-box h3, .contact-info h3, .list-joki-box h3 {
                 font-size: 1.2rem;
             }
 
-            .account-specs li, .list-joki-box li, .fighting-styles .fighting-style p, .sword-gun .item p, .materials .item p {
+            .account-specs li, .screenshot-box img, .list-joki-box li {
                 font-size: 0.9rem;
             }
 
@@ -439,6 +432,12 @@
 
             .nav-menu a {
                 padding: 10px 15px;
+            }
+
+            /* V4 Things responsive */
+            .list-joki-box .v4-things li {
+                display: block;
+                margin: 5px 0;
             }
 
             /* Fighting Styles Responsive */
@@ -457,17 +456,17 @@
             }
 
             /* Sword & Gun Responsive */
-            .sword-gun .item, .materials .item {
+            .sword-gun .item {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .sword-gun .item img, .materials .item img {
+            .sword-gun .item img {
                 margin-right: 0;
                 margin-bottom: 10px;
             }
 
-            .sword-gun .item p, .materials .item p {
+            .sword-gun .item p {
                 text-align: center;
             }
         }
@@ -544,61 +543,60 @@
         </div>
     
         <!-- Akun Kedua: RagingDemonXOwn1 -->
-        <div class="section" id="joki-section">
-            <div class="main-content">
-                <div class="avatar">
-                    <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
-                </div>
-                <h2>RagingDemonXOwn1 (Data Polos)</h2>
-                <h3>ID: 5576044696</h3>
-                
-                <!-- Tombol menuju profil Roblox -->
-                <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
-        
-                <!-- Bagian Kontak di dalam Toko Jual Akun -->
-                <div class="contact-info">
-                    <h3>Kontak Kami</h3>
-                    <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
-                    <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini atau ingin informasi tentang akunnya yang lebih lanjut.</p>
-                </div>
-        
-                <!-- Bagian Spek Akun -->
-                <div class="account-specs">
-                    <h3>Spek Akun (Blox Fruit)</h3>
-                    <ul>
-                        <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit FULL MASTERY</li>
-                        <li><span class="label">Buah Perm:</span> -</li>
-                        <li><span class="label">Level:</span> 2550 (MAX)</li>
-                        <li><span class="label">Belly:</span> $20M+ (Akan naik terus karena di mainkan oleh penjual)</li>
-                        <li><span class="label">Fragments:</span> 20K (Akan naik terus karena di mainkan oleh penjual)</li>
-                        <li><span class="label">Bounty:</span> 2.5M</li>
-                        <li><span class="label">Honor:</span> 2.5M</li>
-                        <li><span class="label">Melee:</span> God Human FULL MASTERY</li>
-                        <li><span class="label">Sword:</span> Cursed Dual Katana, True Triple Katana FULL MASTERY</li>
-                        <li><span class="label">Treasure:</span> Shadow, Rumble</li>
-                        <li><span class="label">Valuable:</span> 4 Mirror Fractal</li>
-                        <li><span class="label">Accessory:</span> Pale Scarf, Pilot Helmet, Valkyrie Helm</li>
-                        <li><span class="label">Gun:</span> Soul Guitar, Acidum Rifle FULL MASTERY</li>
-                        <li><span class="label">V4:</span> Shark (Gear 2)</li>
-                        <li><span class="label">Haki Color:</span> Snow White</li>
-                        <li><span class="label">Observation Haki:</span> V2</li>
-                    </ul>
-                </div>
+        <div class="main-content">
+            <div class="avatar">
+                <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-23FF29CC8FB82A87915B2C435C0708C9-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Avatar Roblox RagingDemonXOwn1">
+            </div>
+            <h2>RagingDemonXOwn1 (Data Polos)</h2>
+            <h3>ID: 5576044696</h3>
+            
+            <!-- Tombol menuju profil Roblox -->
+            <a class="button" href="https://www.roblox.com/users/5576044696/profile" target="_blank">Kunjungi Profil Roblox Saya</a>
     
-                <!-- Bagian Screenshot Akun -->
-                <div class="screenshot-box">
-                    <h3>Screenshot Akun</h3>
-                    <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
-                    <img src="https://cdn.discordapp.com/attachments/1237751850309255208/1294928674184888385/photo-collage.png.png?ex=670ccbce&is=670b7a4e&hm=670231e1de89f715bdb7ab37d24c6f9dcc29fee6591e8b64cfc83dbe14f5ebdc&" alt="Screenshot Akun RagingDemonXOwn1 - Screenshot 19">
-                    <img src="https://cdn.discordapp.com/attachments/1294492476580560949/1294637962461581342/Screenshot_20.png?ex=670bbd0f&is=670a6b8f&hm=db568f0e1b61f732a618b14bbf114f9469ea5747ed887c9c8190687991da5da6&" alt="Screenshot Akun RagingDemonXOwn1 - Screenshot 20">
-                </div>
+            <!-- Bagian Kontak di dalam Toko Jual Akun -->
+            <div class="contact-info">
+                <h3>Kontak Kami</h3>
+                <p>Hubungi kami di Discord: <span>kentalmaniz.</span></p>
+                <p>Atau WA: <span>+62 853-9585-2011</span> jika tertarik untuk membeli akun ini atau ingin informasi tentang akunnya yang lebih lanjut.</p>
+            </div>
+    
+            <!-- Bagian Spek Akun -->
+            <div class="account-specs">
+                <h3>Spek Akun (Blox Fruit)</h3>
+                <ul>
+                    <li><span class="label">Buah yang saya miliki:</span> Kitsune Fruit FULL MASTERY</li>
+                    <li><span class="label">Buah Perm:</span> -</li>
+                    <li><span class="label">Level:</span> 2550 (MAX)</li>
+                    <li><span class="label">Belly:</span> $20M+ (Akan naik terus karena di mainkan oleh penjual)</li>
+                    <li><span class="label">Fragments:</span> 20K (Akan naik terus karena di mainkan oleh penjual)</li>
+                    <li><span class="label">Bounty:</span> 2.5M</li>
+                    <li><span class="label">Honor:</span> 2.5M</li>
+                    <li><span class="label">Melee:</span> God Human FULL MASTERY</li>
+                    <li><span class="label">Sword:</span> Cursed Dual Katana, True Triple Katana FULL MASTERY</li>
+                    <li><span class="label">Treasure:</span> Shadow, Rumble</li>
+                    <li><span class="label">Valuable:</span> 4 Mirror Fractal</li>
+                    <li><span class="label">Accessory:</span> Pale Scarf, Pilot Helmet, Valkyrie Helm</li>
+                    <li><span class="label">Gun:</span> Soul Guitar, Acidum Rifle FULL MASTERY</li>
+                    <li><span class="label">V4:</span> Shark (Gear 2)</li>
+                    <li><span class="label">Haki Color:</span> Snow White</li>
+                    <li><span class="label">Observation Haki:</span> V2</li>
+                </ul>
+            </div>
+    
+            <!-- Bagian Screenshot Akun -->
+            <div class="screenshot-box">
+                <h3>Screenshot Akun</h3>
+                <img src="https://media.discordapp.net/attachments/1288684655247097901/1294297951287513162/WhatsApp_Image_2024-10-11_at_21.56.49_562a97aa.jpg?ex=670a8066&is=67092ee6&hm=b1fd2c05416394a4bec30b1eaaa2081a6ac45a173efc9fa81c669f1b867f7c43&=&format=webp&width=518&height=385" alt="Screenshot Akun RagingDemonXOwn1">
+                <img src="https://cdn.discordapp.com/attachments/1237751850309255208/1294928674184888385/photo-collage.png.png?ex=670ccbce&is=670b7a4e&hm=670231e1de89f715bdb7ab37d24c6f9dcc29fee6591e8b64cfc83dbe14f5ebdc&" alt="Screenshot Akun RagingDemonXOwn1 - Screenshot 19">
+                <img src="https://cdn.discordapp.com/attachments/1294492476580560949/1294637962461581342/Screenshot_20.png?ex=670bbd0f&is=670a6b8f&hm=db568f0e1b61f732a618b14bbf114f9469ea5747ed887c9c8190687991da5da6&" alt="Screenshot Akun RagingDemonXOwn1 - Screenshot 20">
             </div>
         </div>
-
     </div>
 
+    
     <!-- Seksi Joki Akun -->
     <div class="section" id="joki-section">
+        
         <!-- Bagian Joki Akun -->
         <div class="account-specs">
             <h3>Joki Akun dari kManiz</h3>
@@ -642,6 +640,7 @@
                     <ul>
                         <li>2RB/Raid Normal (Penjoki Host)</li>
                         <li>3RB/Raid Special (Penjoki Host)</li>
+                        
                         <li>1RB/Raid Normal (Anda Host)</li>
                         <li>2RB/Raid Special (Anda Host)</li>
                     </ul>
@@ -752,8 +751,8 @@
             </div>
         </div>
 
-        <!-- Materials Section -->
-        <div class="materials">
+            <!-- Materials Section -->
+        <div class="sword-gun"> <!-- Using the same style as sword-gun for consistency -->
             <h3>Materials</h3>
             <div class="item">
                 <img src="https://media.discordapp.net/attachments/1294492476580560949/1294627753613721641/110.png?ex=670bb38d&is=670a620d&hm=1d82960306dd358c7fdc25485e3b65ccc6fb04992111f646959c0786ff2702d3&=&format=webp&quality=lossless&width=121&height=121" alt="Levi Heart">
